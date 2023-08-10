@@ -100,6 +100,7 @@
           event.preventDefault();
           var targetUrl = "../semester/semester.html";
           window.location.href = targetUrl;
+          
         });
       }
     });

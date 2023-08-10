@@ -100,7 +100,7 @@ a:hover{
 .boxofmnahg{
     z-index: 1;
     margin: auto;
-   
+   margin-bottom: 10rem;
     padding: 40px;
     box-shadow:  20px 0px 20px 8px #2f7da97d;
    border-top-right-radius: 3px;
