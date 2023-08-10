@@ -1,0 +1,263 @@
+:root{
+    --dark-color : #19283f;
+    --greaen-color: #f24e1e;
+}
+body
+{   
+    
+    background-color: white;
+    font-family: 'Cairo', sans-serif;
+    background-position: center ;
+    background-size: cover;
+}
+.searchWeb{
+    margin: 15px;
+/* montaser */
+}
+.searchwebinput{
+    border-radius: 15px;
+    border-width: 3px;
+    border: solid 1px;
+}
+.navbar{
+    background-color: rgb(255, 255, 255);
+
+}
+.navbar .navbar-nav  .nav-link{
+    font-family: 'Cairo', sans-serif;
+    color: black;
+    font-weight: 600;
+    
+}
+.barmeun{
+    color: black;
+}
+.navbar .navbar-nav  .nav-link.active,
+.navbar .navbar-nav  .nav-link:focus,
+.navbar .navbar-nav  .nav-link:hover{
+    color :var(--greaen-color)
+}
+ .navbar .navbar-toggler{
+    color: white;
+    font-size: 25px;
+    border-color: white;
+ }
+.navbar .search{
+    border-left: 1px solid var(--greaen-color);
+
+}
+.navbar .search svg{
+    color: var(--greaen-color);
+}
+.navbar .navbar-toggler:focus{
+box-shadow: none;
+}
+/* .navbar-brand{
+    background-color: white;
+    padding-bottom: 60px;
+    padding-top: 70px;
+    border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+    position: relative;
+    top: -115px;
+}
+    */
+
+.logonav{
+    width: 75px;
+    background-color: white;
+    padding-bottom: 16px;
+    padding-top: 23px;
+    border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+    position: relative;
+    top: -30px;
+    left: 35px;
+}
+/* nav bar */
+
+/* landing */
+a{
+    font-family: 'Cairo', sans-serif;
+    text-decoration: none;
+    color: black;
+
+}
+a:hover{
+    color: #f24e1e;
+}
+.arro{
+    overflow: hidden;
+    margin-top:2rem;
+    color:#f24e1e ;
+    font-size: 1rem;
+    margin: auto;
+    font-size: 12px;
+    margin-bottom: 8px;
+
+ 
+    
+}
+.boxofQ{
+    
+    height: 24rem;
+    width: 90%;
+    z-index: 1;
+    display: flex;
+    justify-self: center;
+    text-align: center;
+    direction: rtl;
+    top: 60%;
+    flex-direction: row; 
+     max-width: 100%;
+    overflow-x: auto;
+    padding: 40px;
+    box-shadow: 20px 0px 20px 8px #2f7ca961;
+   border-top-right-radius: 40px;
+   border-bottom-right-radius: 40px;
+   font-size: 12px;
+   background-color: rgba(42, 101, 141, 0.031);
+    margin-top: 2rem;
+   margin-bottom: 2rem;
+}
+.imgass{
+    width: 4.5rem;
+    margin-left: 1rem;
+    margin-bottom: 12px;
+    margin-top: 12px ;
+    margin-left: 1rem;
+   
+}  
+.questions{
+    font-size: 14px;
+    font-weight: 500;
+    overflow: hidden;
+    display: inline-block;
+    text-align: center;
+    margin: auto;
+    background-color: #ffff;
+    padding: 10px;
+    box-shadow: #19283f;
+    border-radius: 60px 60px 10px 10px;
+    padding-left: 30px;
+    padding-right:30px ;
+    padding-top: 16px;
+    padding-bottom: 23px;
+    height:100%;
+    width: 9rem;
+    box-shadow:rgba(0, 0, 0, 0.124) 0px 0px 6px 2px;
+    transition: box-shadow 0.5s;
+}
+.questions:hover{
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.495);
+}
+.pdfitems{
+   position: relative;
+   margin: auto;
+   top: 15%;
+   z-index: 0;
+
+}
+.nameofSubject{
+    overflow: hidden;
+    display: inline-block;
+}
+.ControlsMenu{
+    z-index: 10;
+    box-shadow: 0px 0px 8px 2px #00000045;
+    top: 30%;
+    width: 9%;
+    left: 15px;
+    color: white;
+    position: fixed;
+    font-family: 'Cairo', sans-serif;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #29658d;
+    border-radius: 30px;
+}
+.buttonMeunn{
+   
+    margin: 1px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    color: white;
+}
+.mobileControlsMenu{
+   box-shadow: 20px 3px 20px 0px #2f7da97d;
+    position: relative;
+    font-size: 12px;
+    margin: auto;
+    font-family: 'Cairo', sans-serif;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #29658d;
+    /* width: 90%; */
+    margin-bottom: 5px;
+    
+
+}
+.mobilebuttonMeunn{
+    
+    color: white;
+    padding: 8px;
+    padding: 8px;
+    margin: 1px;
+
+}
+.rowarray{
+    
+    display: flex;
+    flex-direction: row;
+    
+    
+}
+#questionsN ,#questionsY{
+    color:#19283f ;
+    font-size: 12px;
+    font-weight: 400;
+}
+.footer {
+    font-family: 'Cairo', sans-serif;
+    background-color: #29658d;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.footer p {
+    direction: rtl;
+    margin: 0;
+    font-size: 0.75rem;
+    color: white;
+}
+
+.footer .logoandP img {
+    width: 4rem;
+}
+
+.footer .logoandP {
+    display: flex;
+    align-items: center;
+    direction: rtl;
+}
+
+.footer .logoandP p {
+    margin: 0 10px;
+}
+
+.footer .contact {
+    display: flex;
+    align-items: center;
+}
+
+.footer .contact a {
+    font-size: 24px;
+    color: white;
+    margin: 0 12px;
+}
