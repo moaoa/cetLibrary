@@ -95,5 +95,13 @@
           window.location.href = targetUrl;
         });
       }
+      if (linkElement.textContent.trim() === 'المشاركات') {
+        linkElement.addEventListener("click", function(event) {
+          event.preventDefault();
+          var targetUrl = "../posting_page/posting_page.html";
+          window.location.href = targetUrl;
+          
+        });
+      }
     });
   });
