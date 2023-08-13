@@ -1,0 +1,45 @@
+created:
+    - app/Http/Controllers/Api/TeacherController.php
+    - app/Http/Controllers/Api/SemesterController.php
+    - app/Http/Controllers/Api/SubjectController.php
+    - app/Http/Controllers/Api/DepartmentController.php
+    - database/factories/TeacherFactory.php
+    - database/factories/SemesterFactory.php
+    - database/factories/SubjectFactory.php
+    - database/factories/DepartmentFactory.php
+    - database/factories/ResourceFactory.php
+    - database/factories/FileFactory.php
+    - database/migrations/2023_08_12_155426_create_teachers_table.php
+    - database/migrations/2023_08_12_155427_create_semesters_table.php
+    - database/migrations/2023_08_12_155428_create_subjects_table.php
+    - database/migrations/2023_08_12_155429_create_departments_table.php
+    - database/migrations/2023_08_12_155430_create_resources_table.php
+    - database/migrations/2023_08_12_155431_create_files_table.php
+    - database/migrations/2023_08_12_155432_create_subject_teacher_table.php
+    - app/Models/Teacher.php
+    - app/Models/Semester.php
+    - app/Models/Subject.php
+    - app/Models/Department.php
+    - app/Models/Resource.php
+    - app/Models/File.php
+    - tests/Feature/Http/Controllers/Api/TeacherControllerTest.php
+    - tests/Feature/Http/Controllers/Api/SemesterControllerTest.php
+    - tests/Feature/Http/Controllers/Api/SubjectControllerTest.php
+    - tests/Feature/Http/Controllers/Api/DepartmentControllerTest.php
+    - app/Http/Requests/Api/TeacherStoreRequest.php
+    - app/Http/Requests/Api/SemesterStoreRequest.php
+    - app/Http/Requests/Api/SubjectStoreRequest.php
+    - app/Http/Requests/Api/DepartmentStoreRequest.php
+    - app/Http/Resources/Api/TeacherResource.php
+    - app/Http/Resources/Api/SemesterResource.php
+    - app/Http/Resources/Api/SubjectResource.php
+    - app/Http/Resources/Api/DepartmentResource.php
+updated:
+    - routes/web.php
+models:
+    Teacher: { name: 'string:50', relationships: { hasMany: Subject } }
+    Semester: { name: 'string:50', relationships: { belongsTo: Department } }
+    Subject: { name: 'string:70', relationships: { belongsTo: Department, belongsToMany: Teacher } }
+    Department: { name: 'string:50' }
+    Resource: { name: 'string:50', playStorePath: 'string:255', appleStorePath: 'string:255', description: 'string:200' }
+    File: { path: 'string:255', isApproved: boolean, relationships: { belongsTo: 'Subject Teacher' } }

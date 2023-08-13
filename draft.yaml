@@ -1,0 +1,89 @@
+models:
+  Teacher:
+    name: string:50
+    relationships:
+      hasMany: Subject
+
+  Semester:
+    name: string:50
+    relationships:
+      belongsTo: Department
+
+  Subject:
+    name: string:70
+    relationships:
+      belongsTo: Department
+      belongsToMany: Teacher
+
+  Department:
+    name: string:50
+
+  Resource:
+    name: string:50
+    playStorePath: string:255
+    appleStorePath: string:255
+    description: string:200
+
+  File:
+    path: string:255
+    isApproved: boolean
+    relationships:
+      belongsTo:
+        - Subject
+        - Teacher
+# controllers:
+#   Teacher:
+#     index:
+#       query: all
+#       render: post.index with:posts
+
+#     store:
+#       validate: title, content
+#       save: post
+#       send: ReviewNotification to:post.author with:post
+#       dispatch: SyncMedia with:post
+#       fire: NewPost with:post
+#       flash: post.title
+#       redirect: post.index
+
+controllers:
+  Api\Teacher:
+    index:
+      query: all
+      resource: teachers
+    store:
+      validate: name
+      save: Teacher
+      respond: 201
+
+  Api\Semester:
+    index:
+      query: all
+      resource: Semester
+    store:
+      validate: name
+      save: Semester
+      respond: 201
+
+  Api\Subject:
+    index:
+      query: all
+      resource: subjects
+    show:
+      find: subject.id
+      resource: subject
+    store:
+      validate: name
+      save: subject
+      respond: 201
+  Api\Department:
+    index:
+      query: all
+      resource: department
+    show:
+      find: department.id
+      resource: department
+    store:
+      validate: name
+      save: department
+      respond: 201
