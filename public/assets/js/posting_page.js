@@ -59,12 +59,20 @@ document.addEventListener("DOMContentLoaded", function () {
             method: "post",
             body: formData,
         })
-            .then(() => {
+            .then((res) => {
+                if (res.status !== 200) {
+                    resultSection.innerHTML = `
+                    <div style="color: red">
+                    يجب ان يكون الملف من نوع بي دي اف<br/>
+                    وان لا يتجاوز حجمه 2 ميغا بايت
+                    </div>
+                    `;
+                    return;
+                }
                 dropZoneHeading.innerText = "قم بسحب وإفلات الملف هنا";
                 resultSection.innerText = "تم الارسال بنجاح";
             })
             .catch((e) => {
-                resultSection.innerText = "فشل الارسال الرجاء المحاولة مجددا";
                 console.log(e);
             });
     });

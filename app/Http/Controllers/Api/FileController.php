@@ -30,37 +30,44 @@ class FileController extends Controller
 
     public function store(Request $request): Response
     {
-        $request->validate([
-            'file' => 'required|mimes:pdf|max:2048'
-            ]);
-        $fileModel = new File;
+        try {
+             $request->validate([
+                'file' => 'required|mimes:pdf|max:1048'
+                ]);
+            $fileModel = new File;
 
-        if(!$request->file()) return response('please send a file', 400);
+            $fileName = time().'_'.$request->file->getClientOriginalName();
+            $filePath = $request->file('file')->storeAs('uploads', $fileName, 'public');
+            //$fileModel->name = time().'_'.$request->file->getClientOriginalName();
+            $fileModel->path = '/storage/' . $filePath;
+            $fileModel->isApproved = false;
+            $fileModel->save();
 
-        $fileName = time().'_'.$request->file->getClientOriginalName();
-        $filePath = $request->file('file')->storeAs('uploads', $fileName, 'public');
-        //$fileModel->name = time().'_'.$request->file->getClientOriginalName();
-        $fileModel->path = '/storage/' . $filePath;
-        $fileModel->isApproved = false;
-        $fileModel->save();
-
-        return response('saved');
+            return response('saved');
+        } catch (\Throwable $th) {
+            //throw $th;
+            return response('the file must be pdf and less than 2 mb', 419);
+        }
     }
     public function adminUpload(Request $request): Response
     {
-        $request->validate([
-            'file' => 'required|mimes:pdf|max:2048'
-            ]);
-        $fileModel = new File;
+        try {
+            //code...
+            $request->validate([
+                'file' => 'required|mimes:pdf|max:2048'
+                ]);
+            $fileModel = new File;
 
-        if(!$request->file()) return response('please send a file', 400);
-
-        $fileName = time().'_'.$request->file->getClientOriginalName();
-        $filePath = $request->file('file')->storeAs('uploads', $fileName, 'public');
-        //$fileModel->name = time().'_'.$request->file->getClientOriginalName();
-        $fileModel->path = '/storage/' . $filePath;
-        $fileModel->isApproved = true;
-        $fileModel->save();
+            $fileName = time().'_'.$request->file->getClientOriginalName();
+            $filePath = $request->file('file')->storeAs('uploads', $fileName, 'public');
+            //$fileModel->name = time().'_'.$request->file->getClientOriginalName();
+            $fileModel->path = '/storage/' . $filePath;
+            $fileModel->isApproved = true;
+            $fileModel->save();
+        } catch (\Throwable $th) {
+            //throw $th;
+            return response('the file must be pdf and less than 2 mb', 419);
+        }
 
         return response('saved');
     }
