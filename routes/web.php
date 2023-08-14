@@ -14,6 +14,30 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+
+Route::get('/posting', function () {
+    return view('posting_page');
+})->name('posting');
+
+Route::get('/questions', function () {
+    return view('questions_page');
+})->name('question');
+
+route::get('/study_apps', function () {
+    return view('study_apps_page');
+})->name('study_apps_page');
+
+route::get('/study_materials', function () {
+    return view('study_materials_page');
+})->name('study_materials_page');
+
+Route::get('/semester', function () {
+    return view('semester_page');
+})->name('semester_page');
+
+Route::get('/subjects', function () {
+    return view('subjects_page');
+})->name('subjects_page');
 
