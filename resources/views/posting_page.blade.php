@@ -81,6 +81,7 @@
                 </div>
             </div>
     <!-- الي هنا -->
+    @include('includes/configScript')
     <script src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>
     <script src="{{asset('assets/js/all.min.js')}}"></script>
     <script src="{{asset('assets/js/posting_page.js')}}"></script>

@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
         formData.append("file", file);
 
         resultSection.innerText = "جاري الرفع ...";
-        fetch("http://localhost:8000/api/file", {
+        fetch(`${config.appUrl}/api/file`, {
             method: "post",
             body: formData,
         })
