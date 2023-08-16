@@ -27,16 +27,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
     postingForm.addEventListener("submit", (e) => {
         e.preventDefault();
+
+        if (!file) {
+            resultSection.innerHTML = `
+                        <div style="color: red">
+                        الرجاء ارفاق الملف
+                        </div>
+                    `;
+            return;
+        }
+
         const formData = new FormData();
         formData.append("file", file);
 
         resultSection.innerText = "جاري الرفع ...";
+
         fetch(`${config.appUrl}/api/file`, {
             method: "post",
             body: formData,
         })
             .then((res) => {
-                if (res.status !== 200) {
+                if (res.status === 419) {
                     resultSection.innerHTML = `
                     <div style="color: red">
                     يجب ان يكون الملف من نوع بي دي اف<br/>
@@ -45,6 +56,16 @@ document.addEventListener("DOMContentLoaded", function () {
                     `;
                     return;
                 }
+
+                if (res.status === 500) {
+                    resultSection.innerHTML = `
+                        <div style="color: red">
+                        حدث خطا
+                        </div>
+                    `;
+                    return;
+                }
+
                 dropZoneHeading.innerText = "قم بسحب وإفلات الملف هنا";
                 resultSection.innerText = "تم الارسال بنجاح";
             })

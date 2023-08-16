@@ -9,6 +9,8 @@ use App\Http\Resources\Api\FileResource;
 use App\Models\File;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Validator;
+
 
 class FileController extends Controller
 {
@@ -30,10 +32,16 @@ class FileController extends Controller
 
     public function store(Request $request): Response
     {
+
+        $validator = Validator::make($request->all(), [
+            'file' => 'required|mimes:pdf|max:1048',
+        ]);
+
+        if ($validator->fails()) {
+            return response('the file must be pdf and less than 2 mb', 419);
+        }
+
         try {
-             $request->validate([
-                'file' => 'required|mimes:pdf|max:1048'
-                ]);
             $fileModel = new File;
 
             $fileName = time().'_'.$request->file->getClientOriginalName();
@@ -43,10 +51,11 @@ class FileController extends Controller
             $fileModel->isApproved = false;
             $fileModel->save();
 
+
             return response('saved');
         } catch (\Throwable $th) {
-            //throw $th;
-            return response('the file must be pdf and less than 2 mb', 419);
+            // throw $th;
+            return response('internal error', 500);
         }
     }
     public function adminUpload(Request $request): Response
@@ -65,7 +74,7 @@ class FileController extends Controller
             $fileModel->isApproved = true;
             $fileModel->save();
         } catch (\Throwable $th) {
-            //throw $th;
+            // throw $th;
             return response('the file must be pdf and less than 2 mb', 419);
         }
 
