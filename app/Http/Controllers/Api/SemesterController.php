@@ -13,9 +13,10 @@ class SemesterController extends Controller
 {
     public function index(Request $request): Response
     {
-        $semesters = Semester::all();
+        $semesters = Semester::with('subjects')->get();
 
-        return  response(SemesterResource::collection($Semester));
+        return  response(SemesterResource::collection($semesters));
+        //return  response($semesters);
     }
 
     public function store(SemesterStoreRequest $request): Response

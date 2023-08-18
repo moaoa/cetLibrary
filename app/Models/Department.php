@@ -26,4 +26,9 @@ class Department extends Model
     protected $casts = [
         'id' => 'integer',
     ];
+
+    public function semesters()
+    {
+        return $this->hasMany(Semester::class);
+    }
 }

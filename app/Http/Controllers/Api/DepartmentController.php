@@ -13,9 +13,9 @@ class DepartmentController extends Controller
 {
     public function index(Request $request): Response
     {
-        $departments = Department::all();
+        $departments = Department::with('semesters')->get();
 
-        return  response(DepartmentResource::collection($department));
+        return  response(DepartmentResource::collection($departments));
     }
 
     public function show($id): Response

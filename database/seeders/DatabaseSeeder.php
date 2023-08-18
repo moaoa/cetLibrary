@@ -18,7 +18,23 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+        //teachers
         \App\Models\Teacher::factory(10)->create();
-        //\App\Models\Subject::factory(10)->create();
+
+        $this->call([
+            DepartmentSeeder::class,
+            SemesterSeeder::class,
+        ]);
+        
+
+        // // software engineering
+        // for($i = 0; $i < 10; $i++){
+        //     \App\Models\Subject::factory()->create([
+        //         'name' => 'subject ' . $i,
+        //         'semester_id' => 2
+        //     ]);
+        // }
+
     }
 }
