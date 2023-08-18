@@ -18,6 +18,13 @@ class DepartmentController extends Controller
         return  response(DepartmentResource::collection($departments));
     }
 
+    public function indexWeb(Request $request)
+    {
+        $departments = Department::with('semesters')->get();
+
+        return view('semester_page', ['departments' => DepartmentResource::collection($departments)]);
+    }
+
     public function show($id): Response
     {
         $department = Department::find($id);

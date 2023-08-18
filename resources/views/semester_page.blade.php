@@ -56,7 +56,33 @@
           <div class="container mt-5">
     <h1 class="majors">اختر تخصصك</h1>
     <div class="accordion accordion-flush" id="accordionFlushExample">
+
+
+      @foreach ($departments as $department)
       <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="{{'#flush-collapse-' . $department->id}}" aria-expanded="false" aria-controls="flush-collapseOne">
+            <i class="fa-solid fa-chalkboard-user fa-xl ms-2" style="color: #29658d;"></i> {{$department->name}}
+          </button>
+        </h2>
+        @foreach ($department->semesters as $semester)
+        <div id="{{'flush-collapse-' . $department->id}}" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            <ul class="list-group">
+              <li class="mnahg list-group-item d-flex justify-content-end align-items-end">
+                <a class="pdfitems" href="#">{{$semester->name}}</a>
+               
+              </li>
+              <!-- <li class="mnahg list-group-item d-flex justify-content-end align-items-end">
+                <a class="pdfitems" href="#">الفصل الثاني</a>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+        @endforeach
+      </div>
+      @endforeach 
+      <!-- <div class="accordion-item">
         <h2 class="accordion-header" id="flush-headingOne">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
             <i class="fa-solid fa-chalkboard-user fa-xl ms-2" style="color: #29658d;"></i> العام
@@ -72,7 +98,6 @@
               <li class="mnahg list-group-item d-flex justify-content-end align-items-end">
                 <a class="pdfitems" href="#">الفصل الثاني</a>
               </li>
-              
             </ul>
           </div>
         </div>
@@ -163,11 +188,12 @@
             </ul>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
             
     <!-- الي هنا -->
+    @include('includes/configScript')
     <script src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>
     <script src="{{asset('assets/js/all.min.js')}}"></script>
     <script src="{{asset('assets/js/semester.js')}}"></script>
