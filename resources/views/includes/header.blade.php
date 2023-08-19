@@ -34,7 +34,7 @@
                 <a class="nav-link fs-5 p-2 p-lg-4 " href="/posting">المشاركات</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link fs-5 p-2 p-lg-4" href="/semester" >
+                <a class="nav-link fs-5 p-2 p-lg-4" href="/departments" >
                   اختر تخصصك
                 </a>
               </li>

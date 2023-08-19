@@ -34,7 +34,7 @@ route::get('/study_materials', function () {
 })->name('study_materials_page');
 
 // the methods that end with 'web' are a temporary solution to load api endpoints into the web.php endpoints
-Route::get('/semester', [App\Http\Controllers\Api\DepartmentController::class, 'indexWeb'])->name('semester_page');
+Route::get('/departments', [App\Http\Controllers\Api\DepartmentController::class, 'indexWeb'])->name('semester_page');
 
 Route::get('/subjects', function () {
     return view('subjects_page');
