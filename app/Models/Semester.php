@@ -36,6 +36,6 @@ class Semester extends Model
 
     public function subjects()
     {
-        return $this->hasMany(Subject::class, 'subject_semester', 'subject_id', 'semester_id');
+        return $this->belongsToMany(Subject::class);
     }
 }

@@ -41,6 +41,6 @@ class Subject extends Model
 
     public function semesters(): BelongsToMany
     {
-        return $this->belongsToMany(Semester::class, 'subject_semester', 'semester_id', 'subject_id');
+        return $this->belongsToMany(Semester::class);
     }
 }
