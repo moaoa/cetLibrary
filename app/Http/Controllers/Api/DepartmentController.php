@@ -18,6 +18,7 @@ class DepartmentController extends Controller
         return  response(DepartmentResource::collection($departments));
     }
 
+    //TODO: to be removed
     public function indexWeb(Request $request)
     {
         $departments = Department::with('semesters')->get();
