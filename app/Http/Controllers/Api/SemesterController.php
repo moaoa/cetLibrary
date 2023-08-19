@@ -25,4 +25,11 @@ class SemesterController extends Controller
 
         return response()->noContent(201);
     }
+
+    public function show($id): Response
+    {
+        $semester = Semester::find($id);
+
+        return response(new SemesterResource($semester));
+    }
 }

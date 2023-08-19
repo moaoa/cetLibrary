@@ -23,7 +23,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::resource('teacher', App\Http\Controllers\Api\TeacherController::class)->only('index', 'store');
 
 //semester
-Route::resource('semester', App\Http\Controllers\Api\SemesterController::class)->only('index', 'store');
+Route::resource('semester', App\Http\Controllers\Api\SemesterController::class)->only('index', 'store', 'show');
 
 //subjects
 Route::resource('subject', App\Http\Controllers\Api\SubjectController::class)->only('index', 'show', 'store');
