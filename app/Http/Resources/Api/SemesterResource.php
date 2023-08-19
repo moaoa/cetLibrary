@@ -15,7 +15,7 @@ class SemesterResource extends JsonResource
         return [
             'id' => $this->id,
             'name' => $this->name,
-            'department' => DepartmentResource::make($this->whenLoaded('department')),
+            'department_name' => $this->department->name,
             'subjects' => $this->subjects
         ];
     }
