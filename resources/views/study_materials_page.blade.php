@@ -22,22 +22,19 @@
             <!--من هنا تقدر تمسح لانه هذا تبع المحتوي الصفحه-->
             <nav class=" arro d-flex" style="--bs-breadcrumb-divider: '<'; " aria-label="breadcrumb ">
               <ol class="arro breadcrumb ">
-                <li class=" breadcrumb-item d-flex">
-                  <a href="#">المناهج
-                </a>
-              </li>
-              <li class="breadcrumb-item">
-                <a href="#">اختبار برمجات
-              </a>
-            </li>
-            <li class="breadcrumb-item">
-              <a href="#">الفصل السابع
-            </a>
-          </li>
-          <li class="breadcrumb-item">
-            <a href="#">قسم الحاسب الالي
-          </a>
-        </li>
+                <!-- <li class=" breadcrumb-item d-flex">
+                  <a href="#">المناهج</a>
+                </li> -->
+                <!-- <li class="breadcrumb-item">
+                  <a href="#">اختبار برمجات</a>
+                </li> -->
+                <li class="breadcrumb-item">
+                    <a href="#">{{$semester->name}}</a>
+                </li>
+                <li class="breadcrumb-item">
+                  {{json_encode($semester->department_name)}}
+                  <a href="#">{{$semester->name}} </a>
+                </li>
               </ol>
             </nav>
             <!-- <div class="btn-group-vertical">

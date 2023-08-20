@@ -70,7 +70,7 @@
           <div class="accordion-body">
             <ul class="list-group">
               <li class="mnahg list-group-item d-flex justify-content-end align-items-end">
-                <a class="pdfitems" href="#">{{$semester->name}}</a>
+                <a class="pdfitems" href="/semester/{{$semester->id}}">{{$semester->name}}</a>
                
               </li>
               <!-- <li class="mnahg list-group-item d-flex justify-content-end align-items-end">

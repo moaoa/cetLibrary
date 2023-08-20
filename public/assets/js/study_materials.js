@@ -69,6 +69,6 @@ function createMaterialsList() {
     });
 }
 
-createMaterialsList();
+// createMaterialsList();
 
 document.addEventListener("DOMContentLoaded", function () {});
