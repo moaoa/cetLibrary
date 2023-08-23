@@ -31,7 +31,8 @@ Route::resource('subject', App\Http\Controllers\Api\SubjectController::class)->o
 //departments
 Route::resource('department', App\Http\Controllers\Api\DepartmentController::class)->only('index', 'show', 'store');
 
+// Route::post('/file', [App\Http\Controllers\Api\StudentFileController::class, 'store']);
 //files
-Route::resource('file', App\Http\Controllers\Api\FileController::class)->only('index', 'show', 'store');
+Route::resource('file', App\Http\Controllers\Api\StudentFileController::class)->only('index', 'show', 'store');
 
-Route::post('file/admin-upload', [App\Http\Controllers\Api\FileController::class, 'adminUpload']);
+Route::post('file/admin-upload', [App\Http\Controllers\Api\StudentFileController::class, 'adminUpload']);

@@ -14,10 +14,10 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        \App\Models\User::factory()->create([
+            'name' => 'Test User',
+            'email' => 'test@example.com',
+        ]);
 
         //teachers
         \App\Models\Teacher::factory(10)->create();
@@ -26,9 +26,10 @@ class DatabaseSeeder extends Seeder
             DepartmentSeeder::class,
             SemesterSeeder::class,
             SubjectSeeder::class,
-            SemesterSubjectSeeder::class
+            SemesterSubjectSeeder::class,
+            StudentFileSeeder::class,
+            TeacherFileSeeder::class
         ]);
-        
 
         // // software engineering
         // for($i = 0; $i < 10; $i++){

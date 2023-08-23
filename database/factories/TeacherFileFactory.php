@@ -4,16 +4,16 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
-use App\Models\StudentFile;
+use App\Models\TeacherFile;
 
-class StudentFileFactory extends Factory
+class TeacherFileFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = StudentFile::class;
+    protected $model = TeacherFile::class;
 
     /**
      * Define the model's default state.
@@ -21,8 +21,10 @@ class StudentFileFactory extends Factory
     public function definition(): array
     {
         return [
-            'path' => $this->faker->regexify('[A-Za-z0-9]{255}'),
-            'isApproved' => $this->faker->boolean,
+            'path' => $this->faker->name,
+            'representQuestions' => false,
+            'teacher_id' => 1,
+            'subject_id' => 1
         ];
     }
 }

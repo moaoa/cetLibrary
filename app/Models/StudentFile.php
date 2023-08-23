@@ -4,9 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class File extends Model
+class StudentFile extends Model
 {
     use HasFactory;
 
@@ -30,8 +29,4 @@ class File extends Model
         'isApproved' => 'boolean',
     ];
 
-    public function subjectTeacher(): BelongsTo
-    {
-        return $this->belongsTo(SubjectTeacher::class);
-    }
 }

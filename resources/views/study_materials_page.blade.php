@@ -22,19 +22,12 @@
             <!--من هنا تقدر تمسح لانه هذا تبع المحتوي الصفحه-->
             <nav class=" arro d-flex" style="--bs-breadcrumb-divider: '<'; " aria-label="breadcrumb ">
               <ol class="arro breadcrumb ">
-                <!-- <li class=" breadcrumb-item d-flex">
+                <li class="breadcrumb-item">
+                  <a href="#">{{$subject->name}}</a>
+                </li>
+                <li class=" breadcrumb-item d-flex">
                   <a href="#">المناهج</a>
-                </li> -->
-                <!-- <li class="breadcrumb-item">
-                  <a href="#">اختبار برمجات</a>
-                </li> -->
-                <li class="breadcrumb-item">
-                    <a href="#">{{$semester->name}}</a>
-                </li>
-                <li class="breadcrumb-item">
-                  {{json_encode($semester->department_name)}}
-                  <a href="#">{{$semester->name}} </a>
-                </li>
+                </li> 
               </ol>
             </nav>
             <!-- <div class="btn-group-vertical">
@@ -80,10 +73,12 @@
             
 <div class="boxofmnahg container mt-1 text-center">
   <ul class="list-unstyled" id="materials-list">
-     <!-- <li class="mnahg col-12 mb-4 me-2 ms-2 mt-2  pr-2 d-flex justify-content-end align-items-end">
-      <a class="pdfitems" href=" ">منهج محمد د. الفرجاني (رحمه الله)</a>
-      <img class="imgass" src="imgs/folder.png" alt="">
-    </li> -->
+      @foreach ($subject->teachers as $teacher)
+      <li class="mnahg col-12 mb-4 me-2 ms-2 mt-2  pr-2 d-flex justify-content-end align-items-end">
+        <a class="pdfitems" href="">{{$teacher->name}}</a>
+        <img class="imgass" src="/imgs/folder.png" alt="">
+      </li>
+      @endforeach
   </ul>
 </div>
 

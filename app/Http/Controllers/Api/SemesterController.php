@@ -36,7 +36,6 @@ class SemesterController extends Controller
     {
         $semester = Semester::find($id);
 
-        // dd(new SemesterResource($semester));
-        return view('study_materials_page', ['semester' => new SemesterResource($semester)]);
+        return view('semester_subjects_page', ['semester' => $semester]);
     }
 }

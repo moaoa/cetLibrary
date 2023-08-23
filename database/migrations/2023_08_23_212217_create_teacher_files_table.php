@@ -11,11 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('student_files', function (Blueprint $table) {
+        Schema::create('teacher_files', function (Blueprint $table) {
             $table->id();
             $table->string('path', 255);
-            $table->boolean('isApproved');
             $table->boolean('representQuestions');
+            $table->foreignId('teacher_id')->constrained('teachers');
             $table->foreignId('subject_id')->constrained('subjects');
             $table->timestamps();
         });
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('student_files');
+        Schema::dropIfExists('teacher_files');
     }
 };

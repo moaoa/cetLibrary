@@ -38,7 +38,17 @@ Route::get('/departments', [App\Http\Controllers\Api\DepartmentController::class
 
 Route::get('/semester/{id}', [App\Http\Controllers\Api\SemesterController::class, 'showWeb'])->name('study_materials_page');
 
+Route::get('/curriculum/{subject_id}', App\Http\Controllers\CurriculumController::class);
+
+Route::get('/subject_questions/{subject_id}', App\Http\Controllers\QuestionsController::class);
+
+Route::get('/teacher_curriculum/{subject_id}', App\Http\Controllers\TeacherFilesController::class);
+
+Route::get('/student_curriculum/{subject_id}', App\Http\Controllers\StudentFilesController::class);
+
 Route::get('/subjects', function () {
     return view('subjects_page');
 })->name('subjects_page');
+
+
 

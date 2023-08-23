@@ -21,8 +21,9 @@ class StudentFileFactory extends Factory
     public function definition(): array
     {
         return [
-            'path' => $this->faker->regexify('[A-Za-z0-9]{255}'),
-            'isApproved' => $this->faker->boolean,
+            'path' => $this->faker->name,
+            'representQuestions' => false,
+            'subject_id' => 1
         ];
     }
 }
