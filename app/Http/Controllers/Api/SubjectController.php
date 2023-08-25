@@ -25,13 +25,6 @@ class SubjectController extends Controller
         return response(new SubjectResource($subject));
     }
 
-    public function showWeb( $id)
-    {
-        $subject = Subject::with('teachers')->find($id);
-
-        return view('study_materials_page', ['subject' => $subject]);
-    }
-
     public function store(SubjectStoreRequest $request): Response
     {
         //TODO: fix this endpiont

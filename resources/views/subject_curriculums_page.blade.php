@@ -23,7 +23,7 @@
             <nav class=" arro d-flex" style="--bs-breadcrumb-divider: '<'; " aria-label="breadcrumb ">
               <ol class="arro breadcrumb ">
                 <li class="breadcrumb-item">
-                  <a href="#">{{$subject->name}}</a>
+                  <a href="#">{{$subject_name}}</a>
                 </li>
                 <li class=" breadcrumb-item d-flex">
                   <a href="#">المناهج</a>
@@ -73,12 +73,19 @@
             
 <div class="boxofmnahg container mt-1 text-center">
   <ul class="list-unstyled" id="materials-list">
-      @foreach ($subject->teachers as $teacher)
+      @foreach ($teacher_curriculums as $teacherCurriculum)
       <li class="mnahg col-12 mb-4 me-2 ms-2 mt-2  pr-2 d-flex justify-content-end align-items-end">
-        <a class="pdfitems" href="">{{$teacher->name}}</a>
+        <a class="pdfitems" href="">{{$teacherCurriculum->name}}</a>
         <img class="imgass" src="/imgs/folder.png" alt="">
       </li>
       @endforeach
+
+      @if($student_curriculum)
+      <li class="mnahg col-12 mb-4 me-2 ms-2 mt-2  pr-2 d-flex justify-content-end align-items-end">
+        <a class="pdfitems" href="/student_curriculum/{{$subject_id}}">مناهج الطلبة</a>
+        <img class="imgass" src="/imgs/folder.png" alt="">
+      </li>
+      @endif
   </ul>
 </div>
 

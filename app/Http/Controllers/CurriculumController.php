@@ -15,7 +15,7 @@ class CurriculumController extends Controller
      */
     public function __invoke(string $subject_id)
     {
-        $subjectName = Subject::find($subject_id)->name;
+        $subject = Subject::find($subject_id);
         
         $teachersWithFilesOnCurrentSubject = DB::table('teacher_files')
             ->join('teachers', 'teacher_files.teacher_id', '=', '.teachers.id')
@@ -26,10 +26,13 @@ class CurriculumController extends Controller
 
         $students_files = StudentFile::where('subject_id', $subject_id)->get();
 
-        return [
-            'subject_name' => $subjectName,
+        $curriculums = [
+            'subject_id' => $subject->id,
+            'subject_name' => $subject->name,
             'teacher_curriculums' => $teachersWithFilesOnCurrentSubject,
             'student_curriculum' => count($students_files) > 0,
         ];
+
+        return view('subject_curriculums_page', $curriculums);
     }
 }
