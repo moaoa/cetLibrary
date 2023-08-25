@@ -42,7 +42,7 @@ Route::get('/curriculum/{subject_id}', App\Http\Controllers\CurriculumController
 
 Route::get('/subject_questions/{subject_id}', App\Http\Controllers\QuestionsController::class);
 
-Route::get('/teacher_curriculum/{subject_id}', App\Http\Controllers\TeacherFilesController::class);
+Route::get('/teacher_curriculum/{subject_id}/{teacher_id}', App\Http\Controllers\TeacherFilesController::class);
 
 Route::get('/student_curriculum/{subject_id}', App\Http\Controllers\StudentFilesController::class);
 
