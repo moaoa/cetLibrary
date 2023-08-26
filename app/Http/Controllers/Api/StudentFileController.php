@@ -47,6 +47,7 @@ class StudentFileController extends Controller
             $filePath = $request->file('file')->storeAs('uploads', $fileName, 'public');
             //$fileModel->name = time().'_'.$request->file->getClientOriginalName();
             $fileModel->path = '/storage/' . $filePath;
+            $fileModel->name =  $request->file->getClientOriginalName();
             $fileModel->isApproved = false;
             $fileModel->representQuestions = false;
             $fileModel->save();
@@ -71,6 +72,7 @@ class StudentFileController extends Controller
             $filePath = $request->file('file')->storeAs('uploads', $fileName, 'public');
             //$fileModel->name = time().'_'.$request->file->getClientOriginalName();
             $fileModel->path = '/storage/' . $filePath;
+            $fileModel->name =  $request->file->getClientOriginalName();
             $fileModel->isApproved = true;
             $fileModel->representQuestions = false;
             $fileModel->save();

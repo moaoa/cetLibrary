@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('student_files', function (Blueprint $table) {
             $table->id();
             $table->string('path', 255);
+            $table->string('name', 255);
             $table->boolean('isApproved');
             $table->boolean('representQuestions');
             $table->foreignId('subject_id')->constrained('subjects');
