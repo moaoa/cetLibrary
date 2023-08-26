@@ -26,11 +26,11 @@
     <ol class="arro breadcrumb ">
       <li class="breadcrumb-item">
         <a class="arro_link" href="#">
-          {{$semester->name}}
+          {{$semester->name}} 
         </a>
       </li>
       <li class="breadcrumb-item">
-        <a class="arro_link" href="#">
+        <a class="arro_link" href="/departments">
           {{$semester->department->name}}
         </a>
       </li>
