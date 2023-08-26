@@ -22,6 +22,10 @@ class DatabaseSeeder extends Seeder
         //teachers
         \App\Models\Teacher::factory(10)->create();
 
+        \App\Models\Teacher::create([
+            'name' => 'محمد الفرجاني رحمه الله',
+        ]);
+
         $this->call([
             DepartmentSeeder::class,
             SemesterSeeder::class,
