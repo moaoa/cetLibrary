@@ -1,0 +1,19 @@
+{
+    "1": [
+        "English",
+        "Mathematics",
+        "Electric Circuits",
+        "Digital Circuits I",
+        "Physics"
+    ],
+    "2": [
+        "English II",
+        "Mathematics II",
+        "Electric Circuits II",
+        "Electronic Circuits I",
+        "Digital Circuits II",
+        "Programming Fundamentals",
+        "Electric Circuits (Lab)",
+        "Digital Circuits (Lab)"
+    ]
+}

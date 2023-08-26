@@ -19,8 +19,8 @@ class SemesterSubjectSeeder extends Seeder
 
         // Seed the pivot table
         foreach ($subjects as $subject) {
-            $subject->semesters()->attach($semesters->random());
-            $subject->save();
+            // $subject->semesters()->attach($semesters->random());
+            // $subject->save();
         }
     }
 }
