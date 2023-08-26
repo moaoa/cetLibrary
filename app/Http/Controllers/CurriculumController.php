@@ -19,7 +19,7 @@ class CurriculumController extends Controller
         
         $teachersWithFilesOnCurrentSubject = DB::table('teacher_files')
             ->join('teachers', 'teacher_files.teacher_id', '=', '.teachers.id')
-            ->select('teachers.id', 'teachers.name')
+            ->select('teachers.id as teacher_id', 'teachers.name')
             ->where('teacher_files.subject_id', $subject_id)
             ->distinct()
             ->get();

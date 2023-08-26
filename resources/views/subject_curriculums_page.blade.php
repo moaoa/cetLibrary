@@ -75,7 +75,7 @@
   <ul class="list-unstyled" id="materials-list">
       @foreach ($teacher_curriculums as $teacherCurriculum)
       <li class="mnahg col-12 mb-4 me-2 ms-2 mt-2  pr-2 d-flex justify-content-end align-items-end">
-        <a class="pdfitems" href="">{{$teacherCurriculum->name}}</a>
+        <a class="pdfitems" href="{{'/teacher_curriculum/' . $subject_id . '/' . $teacherCurriculum->teacher_id}}">{{$teacherCurriculum->name}}</a>
         <img class="imgass" src="/imgs/folder.png" alt="">
       </li>
       @endforeach
