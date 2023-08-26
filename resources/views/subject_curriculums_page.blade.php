@@ -26,7 +26,7 @@
                   <a href="#">{{$subject_name}}</a>
                 </li>
                 <li class=" breadcrumb-item d-flex">
-                  <a href="#">المناهج</a>
+                  <a id="back-button" href="">المناهج</a>
                 </li> 
               </ol>
             </nav>
@@ -93,6 +93,15 @@
     <script src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>
     <script src="{{asset('assets/js/all.min.js')}}"></script>
     <script src="{{asset('assets/js/study_materials2.js')}}"></script>
+    <script>
+      const backButton = document.getElementById('back-button')
+
+      const semesterId = localStorage.getItem('semester_id')
+      const studentSemesterName = localStorage.getItem('studentSemesterName')
+
+      backButton.setAttribute('href', '/semester/' + semesterId)
+      backButton.innerText = studentSemesterName
+    </script>
     <!-- <script src="js/index.js"></script> -->
     <!-- هذم سكربت متع البوتس تراب -->
     <footer class="footer text-white py-3">

@@ -103,6 +103,13 @@
     </div> -->
   </div>
   <!-- الي هنا -->
+  <script>
+     const semesterId = <?php echo json_encode($semester->id); ?>;
+     const semesterName = <?php echo json_encode($semester->name); ?>;
+
+     localStorage.setItem('semester_id', semesterId)
+     localStorage.setItem('studentSemesterName', semesterName)
+  </script>
   <script src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>
   <script src="{{asset('assets/js/all.min.js')}}"></script>
   <script src="{{asset('assets/js/subjects.js')}}"></script>
