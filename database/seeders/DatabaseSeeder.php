@@ -26,7 +26,6 @@ class DatabaseSeeder extends Seeder
             DepartmentSeeder::class,
             SemesterSeeder::class,
             SubjectSeeder::class,
-            SemesterSubjectSeeder::class,
             StudentFileSeeder::class,
             TeacherFileSeeder::class
         ]);
