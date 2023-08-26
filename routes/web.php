@@ -32,7 +32,7 @@ route::get('/study_apps', function () {
 // the methods that end with 'web' are a temporary solution to load api endpoints into the web.php endpoints
 Route::get('/departments', [App\Http\Controllers\Api\DepartmentController::class, 'indexWeb'])->name('departments_page');
 
-Route::get('/semester/{id}', [App\Http\Controllers\Api\SemesterController::class, 'showWeb']);
+Route::get('/semester/{id}', App\Http\Controllers\SemesterSubjectsController::class);
 
 Route::get('/curriculum/{subject_id}', App\Http\Controllers\CurriculumController::class);
 

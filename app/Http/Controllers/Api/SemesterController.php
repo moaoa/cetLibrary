@@ -32,10 +32,4 @@ class SemesterController extends Controller
 
         return response(new SemesterResource($semester));
     }
-    public function showWeb($id)
-    {
-        $semester = Semester::find($id);
-
-        return view('semester_subjects_page', ['semester' => $semester]);
-    }
 }
