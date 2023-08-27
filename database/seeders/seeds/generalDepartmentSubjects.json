@@ -1,19 +1,19 @@
 {
     "1": [
-        "English",
-        "Mathematics",
-        "Electric Circuits",
-        "Digital Circuits I",
-        "Physics"
+    "اللغة الإنجليزية",
+    "الرياضيات",
+    "الدوائر الكهربائية",
+    "الدوائر الرقمية I",
+    "الفيزياء"
     ],
     "2": [
-        "English II",
-        "Mathematics II",
-        "Electric Circuits II",
-        "Electronic Circuits I",
-        "Digital Circuits II",
-        "Programming Fundamentals",
-        "Electric Circuits (Lab)",
-        "Digital Circuits (Lab)"
+    "اللغة الإنجليزية II",
+    "الرياضيات II",
+    "الدوائر الكهربائية II",
+    "الدوائر الإلكترونية I",
+    "الدوائر الرقمية II",
+    "أسس البرمجة",
+    "الدوائر الكهربائية (مختبر)",
+    "الدوائر الرقمية (مختبر)"
     ]
 }
