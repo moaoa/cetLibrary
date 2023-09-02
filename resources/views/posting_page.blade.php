@@ -5,16 +5,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>التخصص</title>
-        <link rel="icon" href="../../imgs/favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" href="posting_page.css">
+        <link rel="icon" href="../../imgs/logolibray1.png" type="image/x-icon">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-        <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
         <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
         <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css.map')}}">
         <link rel="stylesheet" href="{{asset('assets/css/all.min.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
     </head>
 <body class="antialiased">
 
@@ -23,10 +21,10 @@
             <!--من هنا تقدر تمسح لانه هذا تبع المحتوي الصفحه-->
 
             <div class="row justify-content-center bg-image mx-0 mb-5" id="form-list">
-                <div class="col-lg-6 py-5" >
-                    <div class="bg-white p-5 my-5"  style="    box-shadow: 20px 0px 20px 8px #2f7ca961;border-top-right-radius: 12px ;border-bottom-right-radius: 12px;">
+                <div class="col-lg-12" >
+                    <div class="bg-white p-5 my-5"  id="shares" >
                         <h1 class="text-center mb-4">شارك معلوماتك مع غيرك</h1>
-                        <div class="container">
+                        <div class="container" id="allform">
                             <h1 class="text-center mb-4">باب المشاركات</h1>
 
                             <form id="file-upload-form">
@@ -51,7 +49,7 @@
                                   <option class="text-center mb-4" value="5">فصل الخامس</option>
                                   <option class="text-center mb-4" value="6">فصل السادس</option>
                                   <option class="text-center mb-4" value="7">فصل السابع</option>
-                                  <option class="text-center mb-4" value="8">فصل الثامن</option>
+                     
 
                                 </select>
                               </div>

@@ -56,7 +56,7 @@ function createMaterialsList() {
 
     materialsData.forEach((material) => {
         const li = document.createElement("li");
-        li.className = "questions me-2 ms-5 ";
+        li.className = "questions ";
 
         const a = document.createElement("a");
         a.className = "pdfitems";

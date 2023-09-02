@@ -15,6 +15,7 @@ class TeacherFileSeeder extends Seeder
         for($i = 0; $i < 4; $i++){
             \App\Models\TeacherFile::factory()->create([
                 'path' => 'asdf',
+                'name' => 'ali',
                 'representQuestions' => false,
                 'teacher_id' => 1,
                 'subject_id' => 1,
@@ -23,6 +24,7 @@ class TeacherFileSeeder extends Seeder
         for($i = 0; $i < 4; $i++){
             \App\Models\TeacherFile::factory()->create([
                 'path' => 'asdf',
+                'name' => 'mahmoud',
                 'representQuestions' => false,
                 'teacher_id' => 2,
                 'subject_id' => 2,
@@ -32,6 +34,7 @@ class TeacherFileSeeder extends Seeder
         for($i = 0; $i < 4; $i++){
             \App\Models\TeacherFile::factory()->create([
                 'path' => 'qufasdf',
+                'name' => 'abdo',
                 'representQuestions' => true,
                 'teacher_id' => 2,
                 'subject_id' => 2,

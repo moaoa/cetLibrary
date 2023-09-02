@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cet Library</title> 
-    <link rel="icon" href="imgs/favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" href="{{asset('assets/css/bondi.css')}}">
+    <link rel="icon" href="../../imgs/logolibray1.png" type="image/x-icon">
+        
         <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
         <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css.map')}}">
         <link rel="stylesheet" href="{{asset('assets/css/all.min.css')}}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="{{asset('assets/css/bondi.css')}}">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100;200;300;400;500;600;700&family=Lalezar&family=Noto+Kufi+Arabic:wght@100;200;300;400;500;600;700;900&display=swap" rel="stylesheet">
