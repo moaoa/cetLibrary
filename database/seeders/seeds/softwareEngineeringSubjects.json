@@ -1,43 +1,43 @@
 {
     "3": [
-        "English III",
-        "Statistics & Probabilities",
-        "Electronic Circuits II",
-        "Electronic Circuits Lab",
-        "Computer System Maintenance",
-        "Programming in C++",
-        "Study skills"
-    ],
-    "4": [
-        "Linear Algebra",
-        "Technical Report Writing",
-        "Microcomputer System",
-        "Network fundamentals",
-        "OOP Fundamentals",
-        "System Analysis & Design"
-    ],
-    "5": [
-        "Computer Architecture",
-        "Routing Protocols",
-        "Data Structures",
-        "Database(Analysis & Design)",
-        "Software Engineering",
-        "OOP Applications"
-    ],
-    "6": [
-        "Computer & Info. security",
-        "Visual Programming Fundamentals",
-        "Database Systems (Implementation)",
-        "LAN Switching & Wireless",
-        "Web Design"
-    ],
-    "7": [
-        "Selective Topic",
-        "Softward testing",
-        "Accessing the WAN",
-        "Selective Topic II",
-        "Web Programming",
-        "Database Administration",
-        "Advanced Visual Programming"
-    ]
-}
+        "اللغة الإنجليزية III",
+        "الإحصاء والاحتمالات",
+        "الدوائر الإلكترونية II",
+        "مختبر الدوائر الإلكترونية",
+        "صيانة أنظمة الحاسوب",
+        "البرمجة بلغة السي++",
+        "مهارات الدراسة"
+        ],
+        "4": [
+        "الجبر الخطي",
+        "كتابة التقارير التقنية",
+        "أنظمة الميكروكمبيوتر",
+        "مبادئ الشبكات",
+        "أسس البرمجة الشيئية",
+        "تحليل وتصميم النظم"
+        ],
+        "5": [
+        "هندسة الحاسوب",
+        "بروتوكولات التوجيه",
+        "هياكل البيانات",
+        "قواعد البيانات (تحليل وتصميم)",
+        "هندسة البرمجيات",
+        "تطبيقات البرمجة الشيئية"
+        ],
+        "6": [
+        "أمان الحاسوب والمعلومات",
+        "أسس البرمجة البصرية",
+        "أنظمة قواعد البيانات (تنفيذ)",
+        "تبديل الشبكات واللاسلكية",
+        "تصميم الويب"
+        ],
+        "7": [
+        "موضوع اختياري",
+        "اختبار البرمجيات",
+        "الوصول إلى الشبكة الواسعة",
+        "موضوع اختياري II",
+        "برمجة الويب",
+        "إدارة قواعد البيانات",
+        "برمجة بصرية متقدمة"
+        ]
+ }

@@ -98,6 +98,7 @@ a:hover{
  
     
 }
+
 .boxofQ{
     
     height: 24rem;
@@ -120,6 +121,10 @@ a:hover{
     margin-top: 2rem;
    margin-bottom: 2rem;
 }
+@media screen and (min-width: 600px) {
+    
+
+
 .imgass{
     width: 4.5rem;
     margin-left: 1rem;
@@ -129,6 +134,7 @@ a:hover{
    
 }  
 .questions{
+
     font-size: 14px;
     font-weight: 500;
     overflow: hidden;
@@ -147,9 +153,12 @@ a:hover{
     width: 9rem;
     box-shadow:rgba(0, 0, 0, 0.124) 0px 0px 6px 2px;
     transition: box-shadow 0.5s;
+    margin-left: 4rem;
+    margin-right: 1rem;
 }
 .questions:hover{
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.495);
+
 }
 .pdfitems{
    position: relative;
@@ -158,9 +167,72 @@ a:hover{
    z-index: 0;
 
 }
+
 .nameofSubject{
     overflow: hidden;
     display: inline-block;
+}
+}
+@media screen and (max-width: 600px) {
+
+    .boxofQ{
+    
+       
+        padding-top:  40px;
+        padding-bottom:  40px;
+
+      
+  
+    }
+
+    .imgass{
+        width: 4.5rem;
+        margin-left: 1rem;
+        margin-bottom: 12px;
+        margin-top: 12px ;
+        margin-left: 1rem;
+       
+    }  
+    .questions{
+        display: flex;
+        font-size: 14px;
+        font-weight: 500;
+        overflow: hidden;
+        display: inline-block;
+        text-align: center;
+        margin: auto;
+        background-color: #ffff;
+        
+        box-shadow: #19283f;
+        border-radius: 60px 60px 10px 10px;
+        padding-left: 30px;
+        padding-right:30px ;
+        padding-top: 16px;
+        padding-bottom: 23px;
+        height:100%;
+        width: 9rem;
+        box-shadow:rgba(0, 0, 0, 0.124) 0px 0px 6px 2px;
+        transition: box-shadow 0.5s;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .questions:hover{
+        box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.495);
+    
+    }
+    .pdfitems{
+       position: relative;
+       margin: auto;
+       top: 15%;
+       z-index: 0;
+    
+    }
+    
+    .nameofSubject{
+        overflow: hidden;
+        display: inline-block;
+    }
+    
 }
 .ControlsMenu{
     z-index: 10;

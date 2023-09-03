@@ -5,53 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>التخصص</title>
-    <link rel="icon" href="../../imgs/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="{{asset('assets/css/semester.css')}}">
+    <link rel="icon" href="../../imgs/logolibray1.png" type="image/x-icon">
     <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css.map')}}">
+    <!-- <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css.map')}}"> -->
     <link rel="stylesheet" href="{{asset('assets/css/all.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/semester.css')}}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body> 
           @include('includes/header')
-
-             
-            
-            
-            <!-- <div class="ControlsMenu btn-group-vertical d-lg-block d-md-block d-none">
-              <a href="#" class="buttonMeunn btn">
-                <i class=" fa-solid fa-book-open"></i>
-                المناهج
-              </a>
-              <a href="#" class="buttonMeunn btn btn-">
-                <i class="fa-solid fa-clipboard-question"></i>
-                اسئلة
-              </a>
-              <a href="#" class="buttonMeunn btn btn-">
-                <i class="fa-solid fa-laptop-code"></i>
-                عملي
-              </a>
-            </div> -->
-            
-
-
-
-            <!-- <div class="mobileControlsMenu btn-group d-lg-none d-md-none d-block d-flex justify-content-center align-items-center" role="group" aria-label="Basic example">
-              <a href="#" class="mobilebuttonMeunn btn btn-">
-                <i class="fa-solid fa-book-open me-2"></i>
-                المناهج
-              </a>
-              <a href="#" class="mobilebuttonMeunn btn btn-">
-                <i class="fa-solid fa-clipboard-question me-2"></i>
-                اسئلة
-              </a>
-              <a href="#" class="mobilebuttonMeunn btn btn-">
-                <i class="fa-solid fa-laptop-code me-2"></i>
-                عملي
-              </a>
-            </div> -->
             
           <div class="container mt-5">
     <h1 class="majors">اختر تخصصك</h1>
@@ -61,13 +25,13 @@
       @foreach ($departments as $department)
       <div class="accordion-item">
         <h2 class="accordion-header" id="flush-headingOne">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="{{'#flush-collapse-' . $department->id}}" aria-expanded="false" aria-controls="flush-collapseOne">
-            <i class="fa-solid fa-chalkboard-user fa-xl ms-2" style="color: #29658d;"></i> {{$department->name}}
+          <button class="accordion-button collapsed" type="button" id="callbtn" data-bs-toggle="collapse" data-bs-target="{{'#flush-collapse-' . $department->id}}" aria-expanded="false" aria-controls="flush-collapseOne">
+            <i class="fa-solid fa-chalkboard-user fa-xl ms-2" id="callfa" style="color: #29658d;"></i> {{$department->name}}
           </button>
         </h2>
         @foreach ($department->semesters as $semester)
         <div id="{{'flush-collapse-' . $department->id}}" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">
+          <div class="accordion-body" id="nameofsamester">
             <ul class="list-group">
               <li class="mnahg list-group-item d-flex justify-content-end align-items-end">
                 <a class="pdfitems" href="/semester/{{$semester->id}}">{{$semester->name}}</a>
