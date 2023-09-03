@@ -26,7 +26,7 @@
       <div class="accordion-item">
         <h2 class="accordion-header" id="flush-headingOne">
           <button class="accordion-button collapsed" type="button" id="callbtn" data-bs-toggle="collapse" data-bs-target="{{'#flush-collapse-' . $department->id}}" aria-expanded="false" aria-controls="flush-collapseOne">
-            <i class="fa-solid fa-chalkboard-user fa-xl ms-2" id="callfa" style="color: #29658d;"></i> {{$department->name}}
+            <i class="{{$department->icon}}" id="callfa" style="color: #29658d;"></i> {{$department->name}}
           </button>
         </h2>
         @foreach ($department->semesters as $semester)
