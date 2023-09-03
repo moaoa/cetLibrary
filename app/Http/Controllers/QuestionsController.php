@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\StudentFile;
 use App\Models\TeacherFile;
 use Illuminate\Http\Request;
+use App\Models\Subject;
 
 
 class QuestionsController extends Controller
@@ -26,6 +27,11 @@ class QuestionsController extends Controller
         ->where('representQuestions', true)
         ->get();
 
-        return [...$studentFiles, $teacherFiles];
+        $subject = Subject::find($subject_id);
+
+        return view('questions_page', [
+            'subject_name' => $subject->name,
+            'files' => [...$studentFiles, ...$teacherFiles]
+        ]);
     }
 }

@@ -21,16 +21,16 @@ Route::get('/posting', function () {
     return view('posting_page');
 })->name('posting');
 
-Route::get('/questions', function () {
-    return view('questions_page');
-})->name('question');
+// Route::get('/questions/{subject_id}', function () {
+//     return view('questions_page');
+// })->name('question');
 
 route::get('/study_apps', function () {
     return view('study_apps_page');
 })->name('study_apps_page');
 
-// the methods that end with 'web' are a temporary solution to load api endpoints into the web.php endpoints
-Route::get('/departments', [App\Http\Controllers\Api\DepartmentController::class, 'indexWeb'])->name('departments_page');
+//TODO: to be changed to a web endpiont instead of an api endpoint
+Route::get('/departments', [App\Http\Controllers\Api\DepartmentController::class, 'indexWeb']);
 
 Route::get('/semester/{id}', App\Http\Controllers\SemesterSubjectsController::class);
 

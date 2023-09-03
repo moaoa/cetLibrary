@@ -48,7 +48,7 @@
             <div class="card-body">
               <h5 class="card-title fs-4 fw-bolder">{{$subject->name}}</h5>
               <div class="btn-group w-100 p-3" role="group" aria-label="Basic outlined example">
-                <a type="button" class="btn" href="#">الاسئلة</a>
+                <a type="button" class="btn" href="/questions/{{$subject->id}}">الاسئلة</a>
                 <a type="button" class="btn" href="{{ url('/curriculum/' . $subject->id) }}">المناهج</a>
               </div>
             </div>

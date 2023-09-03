@@ -15,6 +15,7 @@ class StudentFileSeeder extends Seeder
         for($i = 0; $i < 4; $i++){
             \App\Models\StudentFile::factory()->create([
                 'path' => 'asdf',
+                'name' => 'fileName',
                 'representQuestions' => false,
                 'isApproved' => true,
                 'subject_id' => 1,
@@ -23,6 +24,7 @@ class StudentFileSeeder extends Seeder
         for($i = 0; $i < 4; $i++){
             \App\Models\StudentFile::factory()->create([
                 'path' => 'asdf',
+                'name' => 'fileName',
                 'representQuestions' => false,
                 'isApproved' => true,
                 'subject_id' => 2,
@@ -32,6 +34,7 @@ class StudentFileSeeder extends Seeder
         for($i = 0; $i < 4; $i++){
             \App\Models\StudentFile::factory()->create([
                 'path' => 'asdf',
+                'name' => 'fileName',
                 'representQuestions' => true,
                 'isApproved' => true,
                 'subject_id' => 2,
