@@ -19,28 +19,13 @@ class DatabaseSeeder extends Seeder
             'email' => 'test@example.com',
         ]);
 
-        //teachers
-        \App\Models\Teacher::factory(10)->create();
-
-        \App\Models\Teacher::create([
-            'name' => 'محمد الفرجاني رحمه الله',
-        ]);
-
         $this->call([
+            TeacherSeeder::class,
             DepartmentSeeder::class,
             SemesterSeeder::class,
             SubjectSeeder::class,
             StudentFileSeeder::class,
             TeacherFileSeeder::class
         ]);
-
-        // // software engineering
-        // for($i = 0; $i < 10; $i++){
-        //     \App\Models\Subject::factory()->create([
-        //         'name' => 'subject ' . $i,
-        //         'semester_id' => 2
-        //     ]);
-        // }
-
     }
 }
