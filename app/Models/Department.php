@@ -31,4 +31,9 @@ class Department extends Model
     {
         return $this->hasMany(Semester::class);
     }
+
+    public function getRouteKeyName(): string
+    {
+        return 'slug';
+    }
 }

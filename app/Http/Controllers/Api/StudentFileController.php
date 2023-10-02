@@ -33,7 +33,7 @@ class StudentFileController extends Controller
     public function store(Request $request): Response
     {
         $validator = Validator::make($request->all(), [
-            'file' => 'required|mimes:pdf|max:1048',
+            'file' => 'required|mimes:pdf|max:10048',
         ]);
 
         if ($validator->fails()) {

@@ -17,20 +17,23 @@ class DepartmentSeeder extends Seeder
         //
         \App\Models\Department::factory()->create([
             'name' => 'العام',
-
-            'icon' => 'fa-solid fa-chalkboard-user fa-xl ms-2'
+            'icon' => 'fa-solid fa-chalkboard-user fa-xl ms-2',
+            'slug' => 'general'
         ]);
         \App\Models\Department::factory()->create([
             'name' => 'الحاسب الألي',
-            'icon' => 'fa-solid fa-code fa-xl ms-2'
+            'icon' => 'fa-solid fa-code fa-xl ms-2',
+            'slug' => 'software-engineering'
         ]);
         \App\Models\Department::factory()->create([
             'name' => 'الأتصالات',
-            'icon' => 'fa-solid fa-network-wired fa-xl ms-2'
+            'icon' => 'fa-solid fa-network-wired fa-xl ms-2',
+            'slug' => 'telecommunications'
         ]);
         \App\Models\Department::factory()->create([
             'name' => 'التحكم',
-            'icon' => 'fa-solid fa-robot fa-xl ms-2'
+            'icon' => 'fa-solid fa-robot fa-xl ms-2',
+            'slug' => 'control'
         ]);
     }
 }

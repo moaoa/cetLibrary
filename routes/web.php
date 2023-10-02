@@ -1,6 +1,16 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\DepartmentController;
+use App\Http\Controllers\SemesterSubjectsController;
+use App\Http\Controllers\CurriculumController;
+use App\Http\Controllers\QuestionsController;
+use App\Http\Controllers\TeacherFilesController;
+use App\Http\Controllers\StudentFilesController;
+use App\Models\Department;
+use App\Models\Semester;
+use App\Models\Subject;
+use Mockery\Matcher\Subset;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,33 +28,33 @@ Route::get('/', function () {
 });
 
 Route::get('/posting', function () {
-    return view('posting_page');
+    return view('posting_page', 
+    [
+    'departments' => Department::all(), 
+    'semesters' => Semester::with('subjects')->get(), 
+    ]);
 })->name('posting');
 
-// Route::get('/questions/{subject_id}', function () {
-//     return view('questions_page');
-// })->name('question');
+Route::get('/posting', function () {
+    return  [
+    'departments' => Department::all(), 
+    'semesters' => Semester::with('subjects')->get(), 
+    ];
+});
 
 route::get('/study_apps', function () {
     return view('study_apps_page');
 })->name('study_apps_page');
 
-//TODO: to be changed to a web endpiont instead of an api endpoint
-Route::get('/departments', [App\Http\Controllers\Api\DepartmentController::class, 'indexWeb']);
 
-Route::get('/semester/{id}', App\Http\Controllers\SemesterSubjectsController::class);
-
-Route::get('/curriculum/{subject_id}', App\Http\Controllers\CurriculumController::class);
-
-Route::get('/subject_questions/{subject_id}', App\Http\Controllers\QuestionsController::class);
-
-Route::get('/teacher_curriculum/{subject_id}/{teacher_id}', App\Http\Controllers\TeacherFilesController::class);
-
-Route::get('/student_curriculum/{subject_id}', App\Http\Controllers\StudentFilesController::class);
-
-Route::get('/subjects', function () {
-    return view('subjects_page');
-})->name('subjects_page');
-
-
-
+Route::prefix('/departments')->group(function(){
+    //TODO: remove this controller form the api controllers 
+    Route::get('/', [DepartmentController::class, 'indexWeb'])->name('departments.index');
+    Route::prefix('/{department:slug}/semesters')->group(function(){
+       Route::get('/{semester}', SemesterSubjectsController::class)->scopeBindings()->name('semester.subjects');
+       Route::get('/{semester}/curriculum/{subject}', CurriculumController::class)->scopeBindings();
+       Route::get('/{semester}/questions/{subject}', QuestionsController::class)->scopeBindings();
+       Route::get('/{semester}/teachers/{teacher}/{subject}', TeacherFilesController::class)->scopeBindings();
+       Route::get('/{semester}/students-sharing/{subject}', StudentFilesController::class)->scopeBindings();
+    }); 
+});
