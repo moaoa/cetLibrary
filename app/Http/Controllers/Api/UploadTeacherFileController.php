@@ -37,7 +37,6 @@ class UploadTeacherFileController extends Controller
             $fileModel->subject_id = $subjectId;
             $fileModel->teacher_id = $teacherId;
             $fileModel->name =  $request->file->getClientOriginalName();
-            $fileModel->isApproved = false;
             $fileModel->representQuestions = false;
             $fileModel->save();
 

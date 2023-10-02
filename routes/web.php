@@ -54,7 +54,7 @@ Route::prefix('/departments')->group(function(){
        Route::get('/{semester}', SemesterSubjectsController::class)->scopeBindings()->name('semester.subjects');
        Route::get('/{semester}/curriculum/{subject}', CurriculumController::class)->scopeBindings();
        Route::get('/{semester}/questions/{subject}', QuestionsController::class)->scopeBindings();
-       Route::get('/{semester}/teachers/{teacher}/{subject}', TeacherFilesController::class)->scopeBindings();
+       Route::get('/{semester}/teachers/{teacher}/{subject}', TeacherFilesController::class);
        Route::get('/{semester}/students-sharing/{subject}', StudentFilesController::class)->scopeBindings();
     }); 
 });

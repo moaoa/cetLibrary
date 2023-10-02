@@ -22,6 +22,7 @@ class TeacherFilesController extends Controller
         ->where('teacher_id', $teacher->id)
         ->get();
 
+
         $subject = Subject::find($subject->id);
 
         return view('files_page', [
